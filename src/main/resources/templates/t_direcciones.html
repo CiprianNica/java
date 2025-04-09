@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Direcciones</title>
+</head>
+<body>
+<table>
+  <tr><th>Direcciones</th></tr>
+  <tr>
+    <th>Direccion</th>
+    <th>Codigo Postal</th>
+    <th>Ciudad</th>
+    <th>Provincia</th>
+    <th>Pais</th>
+    <th>Modificar</th>
+  </tr>
+  <tr th:each=" direccion:${listado}">
+    <td th:text="${direccion.direccion}"></td>
+    <td th:text="${direccion.cp}"></td>
+    <td th:text="${direccion.ciudad}"></td>
+    <td th:text="${direccion.provincia}"></td>
+    <td th:text="${direccion.pais.nombre}"></td>
+    <td><a th:href="@{'/direccion/modificar/'+${direccion.id}}"><img width="17" height="17" src="https://img.icons8.com/color/48/pencil--v1.png" alt="pencil--v1"/></a></td>
+  </tr>
+</table>
+</body>
+</html>
