@@ -1,22 +1,25 @@
 package com.proyectoClase.springHR.admin;
 
 import com.proyectoClase.springHR.entities.Direccion;
+import com.proyectoClase.springHR.repositories.DireccionRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class DireccionAdmin implements ServDirreccionAdmin{
-    @Override
-    public Direccion getDireccion(int id) {
-        return null;
+
+    DireccionRepository repositorio;
+
+    @Autowired
+    public DireccionAdmin (DireccionRepository repositorio) {
+        this.repositorio = repositorio;
     }
 
-    @Override
-    public Direccion saveDireccion(Direccion direccion) {
-        return null;
-    }
-
-    @Override
-    public Direccion saveDireccion(int id, String direccion, String cp, String provincia, String pais_id) {
-        return null;
-    }
+//    @Autowired
+//    public List<Direccion> listaDirecciones(String idPais){
+//        return repositorio.findAllByPais_Id(idPais);
+//    }
 }

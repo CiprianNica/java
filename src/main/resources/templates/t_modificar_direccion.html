@@ -5,6 +5,27 @@
     <title>Modificar direccion</title>
 </head>
 <body>
-  º
+<form method="post" action="">
+    <label for="id">Identificador: </label>
+    <input type="text" id="id" name="id" th:value="${direccion.id}"/>
+
+    <label for="direccion">Direccion: </label>
+    <input type="text" id="direccion" name="direccion" th:value="${direccion.direccion}"/>
+
+    <label for="cp">Codigo postal</label>
+    <input type="text" id="cp" name="cp" th:value="${direccion.cp}">
+
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="ciudad" th:value="${direccion.ciudad}"/>
+
+    <label for="provincia">Provincia</label>
+    <input type="text" id="provincia" name="provincia" th:value="${direccion.provincia}"/>
+
+    <select id="idPais" name="pais.id">
+        <option th:each=""></option>
+
+    </select>
+</form>
+
 </body>
 </html>

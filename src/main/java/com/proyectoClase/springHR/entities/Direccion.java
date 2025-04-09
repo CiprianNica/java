@@ -27,7 +27,7 @@ public class Direccion {
     @Column(name = "STATE_PROVINCE")
     private String provincia;
 
-    @ManyToOne
+    @ManyToOne(optional = true)
     @JoinColumn(name = "COUNTRY_ID")
     private Pais pais;
 
