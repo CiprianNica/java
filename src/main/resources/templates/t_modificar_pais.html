@@ -7,7 +7,7 @@
 <body>
 <h2>Modificar pais</h2>
 <form method="post" th:action="@{'/pais/modificar'}">
-    <label for="id">Identificador:</label>
+    <label for ="id">Identificador:</label>
     <input type="text" id="id" name="id" th:value="${pais.id}"/>
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" th:value="${pais.nombre}"/>
